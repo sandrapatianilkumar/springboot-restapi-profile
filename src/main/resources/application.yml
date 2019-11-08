@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: stage
+---
+spring:
+  profiles: dev
+
+message: Hello from Dev environment and the current date and time is
+
+---
+spring:
+  profiles: stage
+
+message: Hello from STAGE environment and the current date and time is
+---
+spring:
+  profiles: prod
+
+message: Hello from PRODUCTION environment and the current date and time is
+---
+# open terminal from project and user server.port and spring profile options to change port and profile dynamically
+#C:\Users\Anil Sandrapati\Downloads\simple-rest-api\simple-rest-api>java -jar -Dserver.port=8181 -Dspring.profiles.active=prod target/simple-rest-api-0.0.1-SNAPSHOT.jar
